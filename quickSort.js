@@ -8,5 +8,5 @@ function quickSort(arr) {
     else right.push(arr[i]);
   }
   
-  return quickSort(left).concat([pivot]).concat(quickSort(right));
+  return [...quickSort(left), pivot, ...quickSort(right)];
 }
