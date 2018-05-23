@@ -7,8 +7,9 @@ function getProductsOfAllIntsExceptAtIndex(intArray) {
     returnArray[i] = intArray[i - 1] * returnArray[i - 1];
   }
   // Multiply by previous number in array from end to beginning
-  for (let i = returnArray.length - 2, product = intArray[intArray.length - 1]; i >= 0; product *= intArray[i], i--) {
+  for (let i = returnArray.length - 2, product = intArray[intArray.length - 1]; i >= 0; i--) {
     returnArray[i] *= product;
+    product *= intArray[i];
   }
   return returnArray;
 }

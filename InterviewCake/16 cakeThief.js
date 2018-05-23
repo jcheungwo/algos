@@ -19,9 +19,10 @@ function cakeThief(capacity, cakeTypes) {
 }
 
 let cakeTypes = [
-  {weight: 7, value: 160},
-  {weight: 3, value: 90},
-  {weight: 2, value: 15},
+  {weight: 2, value: 1},
+  {weight: 3, value: 4},
+  {weight: 6, value: 5},
+  {weight: 7, value: 6}
 ];
 
-console.log('answer', cakeThief(20, cakeTypes))
+console.log('answer', cakeThief(10, cakeTypes))
