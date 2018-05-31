@@ -17,21 +17,20 @@ class BinaryTreeNode {
 }
 
 function isBalanced(treeRoot) {
-  let stack = [treeRoot];
-  let leafNodes = [];
+  let queue = [treeRoot];
   let currentNode, max, min;
   treeRoot.level = 1;
   // breadth first traversal
-  while (stack.length) {
-    currentNode = stack.shift();
+  while (queue.length) {
+    currentNode = queue.shift();
     // add their current level at each node
     if (currentNode.left) {
       currentNode.left.level = currentNode.level + 1;
-      stack.push(currentNode.left);
+      queue.push(currentNode.left);
     }
       if (currentNode.right) {
       currentNode.right.level = currentNode.level + 1;
-      stack.push(currentNode.right);
+      queue.push(currentNode.right);
     }
     // check their levels
     if (!currentNode.left && !currentNode.right) {
